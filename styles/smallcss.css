@@ -6,9 +6,11 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-.up-left-body li{
+
+.up-left-body li {
     list-style: none;
 }
+
 /* Main content wrapper */
 main {
     display: flex;
@@ -17,8 +19,8 @@ main {
     margin: 20px auto;
     padding: 2%;
     background-color: #fff;
-    border: 1% solid #ccc;
-    border-radius: 1%;
+    border: 1px solid #ccc; /* fixed */
+    border-radius: 10px; /* fixed */
     box-sizing: border-box;
 }
 
@@ -30,7 +32,7 @@ main {
     justify-content: space-between;
     padding: 2%;
     color: white;
-    border-bottom: 0.5% solid #002244;
+    border-bottom: 1px solid #002244; /* fixed */
 }
 
 .header-title img {
@@ -52,7 +54,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #nav-menu nav ul li a {
@@ -69,11 +71,11 @@ main {
     background-color: beige;
     padding: 2%;
     margin-bottom: 2%;
-    border: 1% solid #690303;
-    border-radius: 1%;
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
+    border: 1px solid #690303; /* fixed */
+    border-radius: 10px; /* fixed */
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Section titles */
@@ -99,7 +101,7 @@ main {
 .up-right-body img {
     width: 30%;
     border-radius: 50%;
-    border: 2px solid #333;
+    border: 2px solid #f0e8e8;
     margin-bottom: 1rem;
 }
 
@@ -107,8 +109,8 @@ main {
 .big-card {
     background-color: #e9f5ff;
     padding: 2%;
-    border: 1% solid #f7d9d9;
-    border-radius: 1%;
+    border: 1px solid #e6e2e2; /* fixed */
+    border-radius: 10px; /* fixed */
     margin-bottom: 2%;
     color: #0d0e0f;
 }
@@ -129,14 +131,28 @@ main {
     color: #0d0e0f;
 }
 
-.small-card > div,
-.small-card2 > div {
+.small-card > div {
     background-color: #dbeafe;
     padding: 1.5%;
-    border: 1% solid #ccc;
+    border: 1px solid #f3f2f2; /* fixed */
     border-radius: 6px;
     min-width: 15%;
     text-align: center;
+}
+
+.small-card2 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-card2 > div {
+    background-color: #dbeafe;
+    padding: 1.5%;
+    border: 1px solid #f3f2f2; /* fixed */
+    border-radius: 6px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -146,5 +162,5 @@ footer {
     text-align: center;
     padding: 2%;
     margin-top: 2%;
-    border-top: 0.5% solid #002244;
+    border-top: 1px solid #002244; /* fixed */
 }
