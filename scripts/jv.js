@@ -49,4 +49,36 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("One or more card buttons not found.");
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const allCourses = document.querySelectorAll(".course");
+  const totalCreditsEl = document.getElementById("totalCredits");
+
+  const cardAll = document.querySelector(".card1");
+  const cardWdd = document.querySelector(".card2");
+  const cardCse = document.querySelector(".card3");
+
+  function showCourses(type) {
+    let total = 0;
+
+    allCourses.forEach(course => {
+      const courseType = course.getAttribute("data-type");
+      if (type === "all" || courseType === type) {
+        course.style.display = "block";
+        total += parseInt(course.getAttribute("data-credits"));
+      } else {
+        course.style.display = "none";
+      }
+    });
+
+    totalCreditsEl.textContent = total;
+  }
+
+  // Show all on initial load
+  showCourses("all");
+
+  // Add click handlers
+  cardAll.addEventListener("click", () => showCourses("all"));
+  cardWdd.addEventListener("click", () => showCourses("wdd"));
+  cardCse.addEventListener("click", () => showCourses("cse"));
+});
 

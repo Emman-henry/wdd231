@@ -7,6 +7,44 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+/* Highlight completed courses */
+.course {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin: 0.25rem;
+  user-select: none;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.course.completed {
+  background-color: #a6d785;
+  font-weight: bold;
+  border-color: #5a9b3d;
+  color: #2e4a11;
+}
+.small-card div {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+.small-card div:hover {
+  background-color: #ddd;
+}
+.small-card div.active {
+  background-color: #5a9b3d;
+  color: white;
+  border-color: #3f6b28;
+  font-weight: bold;
+}
 
 .up-left-body li {
     list-style: none;
