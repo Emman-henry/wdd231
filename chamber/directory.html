@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry</title>
+  <meta name="description" content="WDD 231 – Dynamic Web Fundamentals | Emmanuel Henry | learning CSS and homepage design" />
+  <meta name="author" content="Emmanuel Henry" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry" />
+  <meta property="og:description" content="Explore CSS and web design fundamentals with Emmanuel Henry as part of the WDD 231 course." />
+  <meta property="og:image" content="https://emman-henry.github.io/wdd231/images/cover-image.jpg" />
+  <meta property="og:url" content="https://emman-henry.github.io/wdd231/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Emmanuel Henry Web Projects" />
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  integrity="sha256-l85OmPOj0bIRy7rRHFnl7XwZb6q0xN01Kz5fT2Tf0SY="
+  crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/dir.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- JavaScript -->
+  <script src="script/dir.js" defer></script>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <img src="images/favicon (2).ico" alt="Site Icon" class="nav-icon" />
+    <h1 class="nav-head">H'brews</h1>
+
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#directory">Directory</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#discover">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </section>
+
+    <section id="members" class="grid-view"></section>
+  </main>
+
+  <footer>
+    <section class="footer-into">
+      <div class="abt-company">
+        <p>H'brews Chamber of Commerce</p>
+        <p>No 6 Anthony, Lagos</p>
+        <p>henry.cdcare.ng@gmail.com</p>
+        <p>+234 916 436 7035</p>
+      </div>
+      <div class="social-icon">
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+      </div>
+      <div class="my-infor">
+        <p>WDD 231 Class Project</p>
+        <p>Emmanuel Henry</p>
+        <p>&copy;2025 H'brews Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>

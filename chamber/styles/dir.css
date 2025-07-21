@@ -1,0 +1,163 @@
+/* Normalize basics are already linked in HTML */
+/*=========================
+  Variables
+=========================*/
+:root {
+  --color-primary: #1B376B;
+  --color-secondary: #E1F3FB;
+  --color-white: #ffffff;
+  --color-dark: #050505;
+  --color-accent: #FCE38A;
+  --color-light: #CCC795;
+  --color-extra: #FFC93C;
+  --font-main: "Poppins", sans-serif;
+  --sub-font: "Montserrat", sans-serif;
+}
+
+/* HEADER STYLES */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  flex-wrap: wrap;
+}
+
+/* ICON + BRANDING */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-head {
+  color: var(--color-extra);
+  font-size: 1.5rem;
+  font-family: var(--font-main);
+  margin: 0;
+}
+
+/* MENU TOGGLE (for mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-accent);
+  font-family: var(--font-main);
+}
+
+/* Members STYLES grid view */
+/* MEMBERS STYLES - Default Grid View */
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* LIST VIEW STYLE */
+.member-card.list-view {
+  flex-direction: row;
+  text-align: left;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.member-card.list-view img {
+  margin-bottom: 0;
+  display: none;
+}
+
+   
+/* FOOTER STYLES */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--color-light);
+}
+
+footer .social-icons {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+
+
+}
+
+@media (min-width: 1201px) {
+  #members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem; /* optional: adds spacing between cards */
+  }
+  .footer-into{
+    display: flex;
+    justify-content: space-between;
+   gap: 2rem;
+  }
+}

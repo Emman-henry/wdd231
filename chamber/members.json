@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Alpha Technologies",
+    "address": "123 Tech Street, Lagos",
+    "phone": "+234 901 234 5678",
+    "website": "https://alphatech.com",
+    "image": "alpha-logo.png",
+    "membership": 3,
+    "description": "Leading provider of enterprise software solutions."
+  },
+  {
+    "name": "Beta Builders",
+    "address": "45 Block Road, Abuja",
+    "phone": "+234 812 456 7890",
+    "website": "https://betabuilders.com",
+    "image": "beta-logo.png",
+    "membership": 2,
+    "description": "Innovative construction company focused on eco-friendly buildings."
+  },
+  {
+    "name": "Crest Finance",
+    "address": "22 Bank Street, Port Harcourt",
+    "phone": "+234 703 123 4567",
+    "website": "https://crestfinance.com",
+    "image": "crest-logo.png",
+    "membership": 3,
+    "description": "Your trusted partner for financial growth and stability."
+  },
+  {
+    "name": "Delta Foods",
+    "address": "67 Market Lane, Ibadan",
+    "phone": "+234 814 567 8901",
+    "website": "https://deltafoods.com",
+    "image": "delta-logo.png",
+    "membership": 1,
+    "description": "Supplying fresh and packaged foods across Nigeria."
+  },
+  {
+    "name": "Echo Media",
+    "address": "8 Broadcast Ave, Enugu",
+    "phone": "+234 818 765 4321",
+    "website": "https://echomedia.ng",
+    "image": "echo-logo.png",
+    "membership": 2,
+    "description": "Telling your story through powerful visuals and content."
+  },
+  {
+    "name": "FreshFarm",
+    "address": "14 Green Valley, Jos",
+    "phone": "+234 902 987 6543",
+    "website": "https://freshfarm.ng",
+    "image": "freshfarm-logo.png",
+    "membership": 1,
+    "description": "Organic farming and delivery service for healthy living."
+  },
+  {
+    "name": "Giga Systems",
+    "address": "33 Innovation Drive, Uyo",
+    "phone": "+234 915 123 3210",
+    "website": "https://gigasystems.com",
+    "image": "giga-logo.png",
+    "membership": 3,
+    "description": "End-to-end IT infrastructure and cybersecurity solutions."
+  }
+]
