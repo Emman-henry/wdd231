@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry</title>
   <meta name="description" content="WDD 231 – Dynamic Web Fundamentals | Emmanuel Henry | learning CSS and homepage design" />
@@ -13,8 +13,8 @@
   <!-- Facebook Open Graph Meta Tags -->
   <meta property="og:title" content="WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry" />
   <meta property="og:description" content="Explore CSS and web design fundamentals with Emmanuel Henry as part of the WDD 231 course." />
-  <meta property="og:image" content="https://emman-henry.github.io/wdd231/images/cover-image.jpg" />
-  <meta property="og:url" content="https://emman-henry.github.io/wdd231/" />
+  <meta property="og:image" content="https://emman-henry.github.io/wdd231/chamber/images/cover-image.jpg">
+  <meta property="og:url" content="https://emman-henry.github.io/wdd231/chamber/">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Emmanuel Henry Web Projects" />
 
@@ -28,18 +28,22 @@
   <link rel="stylesheet" href="styles/dir.css" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Preconnect for faster font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Combined Google Font request -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
   <!-- JavaScript -->
-  <script src="script/dir.js" defer></script>
+  <script src="scripts/dir.js" defer></script>
 </head>
 <body>
   <header>
     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
-    <img src="images/favicon (2).ico" alt="Site Icon" class="nav-icon" />
-    <h1 class="nav-head">H'brews</h1>
+    <img src="images/favicon.ico" alt="Site Icon" class="nav-icon" />
+    <p class="nav-head">H'brews</p>
 
     <nav class="nav-menu" id="nav-menu">
       <ul class="nav-links">
@@ -52,6 +56,7 @@
   </header>
 
   <main>
+    <h1>WDD 231 – Dynamic Web Fundamentals</h1>
     <section class="controls">
       <button id="gridBtn">Grid View</button>
       <button id="listBtn">List View</button>
