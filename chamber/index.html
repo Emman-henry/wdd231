@@ -1,47 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 231 – H,brews Chambers - Emmanuel Henry</title>
+  <meta name="description" content="WDD 231 – Dynamic Web Fundamentals | Emmanuel Henry | learning CSS and homepage design" />
+  <meta name="author" content="Emmanuel Henry" />
+
+  <!-- Favicon -->
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry" />
+  <meta property="og:description" content="Explore CSS and web design fundamentals with Emmanuel Henry as part of the WDD 231 course." />
+  <meta property="og:image" content="https://emman-henry.github.io/wdd231/chamber/images/cover-image.jpg">
+  <meta property="og:url" content="https://emman-henry.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Emmanuel Henry Web Projects" />
+
+  <!-- Normalize CSS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  integrity="sha256-l85OmPOj0bIRy7rRHFnl7XwZb6q0xN01Kz5fT2Tf0SY="
+  crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/dir.css" />
+
+  <!-- Google Fonts -->
+  <!-- Preconnect for faster font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Combined Google Font request -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- JavaScript -->
+  <script src="scripts/dir.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/forecast.js" defer></script>
+  
+  
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="" alt="logo-img">
-            <h2>henry's chamber of commerce</h2>
-        </div>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Directory</li>
-                <li>Join</li>
-                <li>Discover</li>
-            </ul>
-        </nav>
-        <main>
-            <div class="hero-section">
-                <img src="images/me.webp" alt="">
-            </div>
-            <h2>Home</h2>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+  
+    <img src="images/favicon.ico" alt="H'brews logo" class="nav-icon">
+
+    <p class="nav-head">H'brews</p>
+
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="hero">
+    <picture>
+      <source srcset="images/big-hero.webp" media="(min-width: 1000px)" loading="lazy" />
+      <source srcset="images/small.webp" media="(min-width: 350px)" loading="lazy" />
+      <img src="images/small.webp" alt="Hero background" loading="lazy" >
+    </picture>
+    <div class="hero-content">
+      <h2>Join our team of innovative entrepreneurs</h2>
+     
+    <button class="Homebutton" onclick="location.href='register.html'">Join us</button>
+
+    </div>
+  </section>
             <section class="upper">
-                <div class="events"></div>
-                <div class="curent-weather"></div>
-                <div class="weather-forecast"></div>
+                <h1 > Home</h1>
+                
+                <div class="card-grid">
+                <div class="card">
+                
+                   <p>Upcoming Events</p>
+      <ul>
+         <li>Investment Opportunities</li>
+         <li>Fundraising Initiatives</li>
+         <li>Business Support Programs</li>
+         <li>Asset Insurance Services</li>
+    </ul>
 
-            </section>
-            <section class="business-class">
-                <div class="buss-1"></div>
-                <div class="buss-2"></div>
-                <div class="buss-3"></div>
-            </section>
-            <footer>
-                <div class="site-info"></div>
-                <div class="medis-links"></div>
-                <div class="course-info"></div>
-            </footer>
+                </div>
+                <div class="card" id="current-weather"></div>
+                <div class="card" id="weather-forecast"></div>
+                </div>
+         </section>
+        
+         <div class="Top-members" id="Top-members" ></div>
 
-        </main>
-    </header>
+    <footer>
+     <section class="footer-into">
+      <div class="abt-company">
+        <p>H'brews Chamber of Commerce</p>
+        <p>No 6 Anthony, Lagos</p>
+        <p>henry.cdcare.ng@gmail.com</p>
+        <p>+234 916 436 7035</p>
+      </div>
+      <div class="social-icon">
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+          <img src="images/twitter.svg" alt="twitter" width="16" height="16" />
+        </a>
+      </div>
+      <div class="my-infor">
+        <p>WDD 231 Class Project</p>
+        <p>Emmanuel Henry</p>
+        <p>&copy;2025 H'brews Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </section>
+</footer>
+
+</main>
+    
 </body>
 </html>
