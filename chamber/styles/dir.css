@@ -8,6 +8,7 @@
   --color-extra: #FFC93C;
   --font-main: "Poppins", sans-serif;
   --sub-font: "Montserrat", sans-serif;
+  --color-charp:#0077cc;
 }
 
 /*======== HEADER / NAV =========*/
@@ -87,6 +88,7 @@ header {
   color: var(--color-white);
   text-decoration: none;
   text-align: right;
+  font-family: var(--font-main);
 }
 
   .nav-links a :hover {
@@ -98,6 +100,14 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* full-screen overlay */
+  z-index: 1;
 }
 
 .hero picture,
@@ -115,16 +125,17 @@ header {
   text-align: center;
   color: white;
   padding: 1em;
-  background: rgba(0, 0, 0, 0.4);
+  z-index: 2; /* above the overlay */
   border-radius: 8px;
+  font-family: var(--font-main);
 }
 
 .Homebutton {
   margin-top: 1em;
   padding: 0.75em 1.5em;
   font-size: 1.2rem;
-  background-color: #0077cc;
-  color: #fff;
+  background-color: var(--color-charp);
+  color: var(--color-white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -155,6 +166,7 @@ header {
   margin: 0.5rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-main);
 }
 
 .member-card img {
@@ -234,6 +246,7 @@ footer a:hover {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-main);
 }
 
 .social-icons {
@@ -276,6 +289,7 @@ footer a:hover {
   font-family: var(--font-main);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-family: var(--font-main);
 }
 
 .card ul {
