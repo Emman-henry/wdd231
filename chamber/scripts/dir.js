@@ -1,67 +1,99 @@
-// === DOM Elements ===
-const membersContainer = document.getElementById('members'); // For the main directory
-const gridBtn = document.getElementById('gridBtn');
-const listBtn = document.getElementById('listBtn');
-const topMemberSection = document.getElementById("Top-members"); // Optional: only exists on some pages
-
-// === VIEW TOGGLING ===
-if (gridBtn && listBtn && membersContainer) {
-  gridBtn.addEventListener('click', () => {
-    membersContainer.classList.add('grid-view');
-    membersContainer.classList.remove('list-view');
+// === DOM READY ===
+document.addEventListener('DOMContentLoaded', () => {
+  // === Highlight Active Nav Link ===
+  const path = window.location.pathname;
+  const currentPage = path.split('/').pop() || "index.html"; // fallback for root
+  document.querySelectorAll('.nav-pages').forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPage) {
+      link.classList.add('active');
+    }
   });
 
-  listBtn.addEventListener('click', () => {
-    membersContainer.classList.add('list-view');
-    membersContainer.classList.remove('grid-view');
-  });
-}
+  // === Hamburger Toggle ===
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-// === FETCH MEMBERS JSON ===
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('show');
+      hamburger.innerHTML = isOpen ? '&times;' : '&#9776;';
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Optional: Close menu when link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.innerHTML = '&#9776;';
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+  }
+
+  // === View Toggle Buttons (Grid/List) ===
+  const membersContainer = document.getElementById('members');
+  const gridBtn = document.getElementById('gridBtn');
+  const listBtn = document.getElementById('listBtn');
+
+  if (gridBtn && listBtn && membersContainer) {
+    gridBtn.addEventListener('click', () => {
+      membersContainer.classList.add('grid-view');
+      membersContainer.classList.remove('list-view');
+    });
+
+    listBtn.addEventListener('click', () => {
+      membersContainer.classList.add('list-view');
+      membersContainer.classList.remove('grid-view');
+    });
+  }
+
+  // === Fetch and Display Members ===
+  fetchMembers();
+});
+
+// === FETCH MEMBERS ===
 async function fetchMembers() {
+  const membersContainer = document.getElementById('members');
+  const topMemberSection = document.getElementById("Top-members");
+
   try {
     const response = await fetch('data/members.json');
     const members = await response.json();
 
-    if (membersContainer) {
-      displayMembers(members); // Render full directory if container exists
-    }
-
-    if (topMemberSection) {
-      displayTopMembers(members); // Render top members if section exists
-    }
-
+    if (membersContainer) displayMembers(members, membersContainer);
+    if (topMemberSection) displayTopMembers(members, topMemberSection);
   } catch (error) {
     console.error('Failed to load member data', error);
   }
 }
 
-// === RENDER ALL MEMBERS (for full directory) ===
-function displayMembers(members) {
-  membersContainer.innerHTML = '';
-
+// === DISPLAY ALL MEMBERS (Directory) ===
+function displayMembers(members, container) {
+  container.innerHTML = '';
   members.forEach(member => {
     const card = createMemberCard(member);
-    membersContainer.appendChild(card);
+    container.appendChild(card);
   });
 }
 
-// === RENDER TOP 3 GOLD MEMBERS ===
-function displayTopMembers(members) {
+// === DISPLAY TOP 3 GOLD MEMBERS ===
+function displayTopMembers(members, container) {
   const topMembers = members.filter(m => m.membership === 3).slice(0, 3);
+
+  container.innerHTML = '';
   if (topMembers.length === 0) {
-    topMemberSection.innerHTML = "<p>No Gold Members available at the moment.</p>";
+    container.innerHTML = "<p>No Gold Members available at the moment.</p>";
     return;
   }
 
-  topMemberSection.innerHTML = '';
   topMembers.forEach(member => {
     const card = createMemberCard(member);
-    topMemberSection.appendChild(card);
+    container.appendChild(card);
   });
 }
 
-// === CARD GENERATOR (Shared by both functions) ===
+// === CREATE MEMBER CARD ===
 function createMemberCard(member) {
   const card = document.createElement('div');
   card.classList.add('member-card');
@@ -81,8 +113,9 @@ function createMemberCard(member) {
 
 // === TRANSLATE MEMBERSHIP LEVEL ===
 function getMembershipLevel(level) {
-  return level === 3 ? "Gold" : level === 2 ? "Silver" : "Member";
+  switch (level) {
+    case 3: return "Gold";
+    case 2: return "Silver";
+    default: return "Member";
+  }
 }
-
-// === INIT ===
-fetchMembers();

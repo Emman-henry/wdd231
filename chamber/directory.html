@@ -44,22 +44,22 @@
   <script src="scripts/dir.js" defer></script>
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
-  
+   <header>
+  <div class="nav-container">
     <img src="images/favicon.ico" alt="H'brews logo" class="nav-icon">
-
     <p class="nav-head">H'brews</p>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
 
-    <nav class="nav-menu" id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="discover">Discover</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html" class="nav-pages">Home</a></li>
+      <li><a href="directory.html" class="nav-pages">Directory</a></li>
+      <li><a href="join.html" class="nav-pages">Join</a></li>
+      <li><a href="discover.html" class="nav-pages">Discover</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <h1 class="h1-head">H,brews Chambers</h1>
