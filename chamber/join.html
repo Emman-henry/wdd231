@@ -30,6 +30,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/dir.css" />
+  <link rel="stylesheet" href="styles/join.css" />
 
   <!-- Google Fonts -->
   <!-- Preconnect for faster font loading -->
@@ -42,6 +43,8 @@
 
   <!-- JavaScript -->
   <script src="scripts/dir.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+  
 </head>
 <body>
    <header>
@@ -61,14 +64,86 @@
   </nav>
 </header>
 
-  <main>
-    <h1 class="h1-head">H,brews Chambers</h1>
-    <section class="controls">
-      <button id="gridBtn">Grid View</button>
-      <button id="listBtn">List View</button>
+ 
+  <main class="form-container">
+    <form method="get" action="thankyou.html">
+      <label>First Name:
+        <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+      </label>
+      <label>Last Name:
+        <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+      </label>
+      <label>Organizational Title:
+        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" required>
+      </label>
+      <label>Email:
+        <input type="email" name="email" title="Email" autocomplete="email" placeholder="example@email.com" required>
+      </label>
+      <label>Mobile Phone:
+        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+      </label>
+      <label>Organization Name:
+        <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+      </label>
+      <label>Membership Level:
+        <select name="membership" title="Membership Level" required>
+          <option value="NP">NP Membership (Free for non-profits)</option>
+          <option value="Bronze">Bronze Membership</option>
+          <option value="Silver">Silver Membership</option>
+          <option value="Gold">Gold Membership</option>
+        </select>
+      </label>
+      <label>Business Description:
+        <textarea name="description" title="Business Description"></textarea>
+      </label>
+      <input type="hidden" name="timestamp" id="timestamp">
+      <input type="submit" value="Submit Application">
+    </form>
+
+    <section class="membership-cards">
+      <div class="card" id="np">
+        <h3>NP Membership</h3>
+        <a href="#modal-np">Learn More</a>
+      </div>
+      <div class="card" id="bronze">
+        <h3>Bronze Membership</h3>
+        <a href="#modal-bronze">Learn More</a>
+      </div>
+      <div class="card" id="silver">
+        <h3>Silver Membership</h3>
+        <a href="#modal-silver">Learn More</a>
+      </div>
+      <div class="card" id="gold">
+        <h3>Gold Membership</h3>
+        <a href="#modal-gold">Learn More</a>
+      </div>
     </section>
 
-    <section id="members" class="grid-view"></section>
+    <!-- Modals -->
+    <dialog id="modal-np">
+      <h4>NP Membership Benefits</h4>
+      <p>Access to community resources, networking, and free event invites for non-profits.</p>
+      <button onclick="document.getElementById('modal-np').close()">Close</button>
+    </dialog>
+
+    <dialog id="modal-bronze">
+      <h4>Bronze Membership Benefits</h4>
+      <p>Includes training sessions, event participation, and basic promotion features.</p>
+      <button onclick="document.getElementById('modal-bronze').close()">Close</button>
+    </dialog>
+
+    <dialog id="modal-silver">
+      <h4>Silver Membership Benefits</h4>
+      <p>Everything in Bronze + featured directory listing, discount on services, and spotlight ads.</p>
+      <button onclick="document.getElementById('modal-silver').close()">Close</button>
+    </dialog>
+
+    <dialog id="modal-gold">
+      <h4>Gold Membership Benefits</h4>
+      <p>All Silver perks + premium support, homepage highlights, and exclusive invitations.</p>
+      <button onclick="document.getElementById('modal-gold').close()">Close</button>
+    </dialog>
+ 
   </main>
 
   <footer>

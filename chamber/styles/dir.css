@@ -102,14 +102,6 @@ header {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* full-screen overlay */
-  z-index: 1;
-}
-
 .hero picture,
 .hero img {
   width: 100%;
@@ -125,7 +117,7 @@ header {
   text-align: center;
   color: white;
   padding: 1em;
-  z-index: 2; /* above the overlay */
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   font-family: var(--font-main);
 }
