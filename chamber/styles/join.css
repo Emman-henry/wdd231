@@ -60,7 +60,10 @@ input[type="submit"]:hover {
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s);
 }
 
 .card h3 {
@@ -77,7 +80,12 @@ input[type="submit"]:hover {
   text-decoration: underline;
 }
 
-/* Animation */
+/* Card animation delays */
+.card:nth-child(1) { --i: 1; }
+.card:nth-child(2) { --i: 2; }
+.card:nth-child(3) { --i: 3; }
+.card:nth-child(4) { --i: 4; }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -89,35 +97,34 @@ input[type="submit"]:hover {
   }
 }
 
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 2rem;
+/* Dialog styling for native <dialog> elements */
+dialog {
+  border: none;
   border-radius: 10px;
-  width: 80%;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
   max-width: 500px;
-  position: relative;
+  width: 80%;
+  margin: auto;
 }
 
-.close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+  margin-top: 1rem;
+  background: #0077cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+}
+
+dialog button:hover {
+  background: #005fa3;
 }
 
 /* Responsive */
