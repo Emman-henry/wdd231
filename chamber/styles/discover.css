@@ -1,0 +1,87 @@
+/* === Discover Container Grid === */
+.discover-section {
+  display: block;
+  grid-template-columns: 1fr; /* Default: 1 card per row */
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Discover Card Base === */
+.discover-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === Image Style === */
+.discover-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* === Content Area === */
+.discover-content {
+  padding: 1rem;
+}
+
+.discover-content h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.discover-content address {
+  font-style: normal;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.discover-content p {
+  margin: 0.5rem 0 1rem;
+}
+
+.discover-content button {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.discover-content button:hover {
+  background-color: #005fa3;
+}
+
+/* === Medium Screens (Tablet) === */
+@media (min-width: 600px) {
+  .discover-card {
+    flex-direction: row;
+  }
+
+  .discover-card img {
+    width: 40%;
+    height: 100%;
+  }
+
+  .discover-content {
+    width: 60%;
+  }
+}
+
+/* === Large Screens (2 Cards Per Row) === */
+@media (min-width: 900px) {
+  .discover-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+}

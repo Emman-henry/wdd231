@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "H'brews Innovation Hub",
+      "address": "123 Startup Lane, Lagos, Nigeria",
+      "description": "A vibrant coworking space and mentoring hub for tech-driven startups.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "GreenMarket Incubator",
+      "address": "45 Enterprise Ave, Ibadan, Nigeria",
+      "description": "Supports agritech entrepreneurs with seed funding and training.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "TechBridge Center",
+      "address": "22 Digital Drive, Abuja, Nigeria",
+      "description": "Offers workshops and digital skills to early-stage founders.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "WomenLift Africa",
+      "address": "67 Empowerment Blvd, Port Harcourt, Nigeria",
+      "description": "Focused on empowering women-led businesses through capital and coaching.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "Startup Garage",
+      "address": "9 Launchpad Way, Kaduna, Nigeria",
+      "description": "An all-in-one service platform for business registration, branding, and growth.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "eCom Boost Lab",
+      "address": "301 Commerce Street, Enugu, Nigeria",
+      "description": "Specializes in helping digital stores scale profitably.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "Founders’ Cafe",
+      "address": "19 Startup Road, Uyo, Nigeria",
+      "description": "A cozy hub for local entrepreneurs to network and share ideas.",
+      "image": "prosmall.webp"
+    },
+    {
+      "name": "Youth Hustle Zone",
+      "address": "56 Rise Street, Benin City, Nigeria",
+      "description": "Supports young entrepreneurs with funding, training, and exposure.",
+      "image": "prosmall.webp"
+    }
+  ]
+}
