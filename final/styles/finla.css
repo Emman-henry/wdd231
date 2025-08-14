@@ -148,6 +148,10 @@ footer a:hover {
 .my-infor {
  font-family: var(--font-main);
 
+
+}
+.modal-close{
+  font-family: var(--sub-font);
 }
 @media (min-width: 1200px) {
   /* Desktop layout */
