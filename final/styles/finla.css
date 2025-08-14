@@ -134,6 +134,21 @@ footer a:hover {
 .social-icons img:hover {
   transform: scale(1.2);
 }
+.abt-company {
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+.my-infor {
+ font-family: var(--font-main);
+
+}
 @media (min-width: 1200px) {
   /* Desktop layout */
 header {
