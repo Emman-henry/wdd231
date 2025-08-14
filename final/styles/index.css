@@ -1,0 +1,58 @@
+
+/* membership card*/
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.membership-cards .card {
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.membership-cards .card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.membership-cards .card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  background-color: #0078D4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.membership-cards .card a:hover {
+  background-color: #005ea2;
+}
+
+.membership-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: give each membership a distinct accent color */
+#np {
+  border-top: 5px solid #4CAF50; /* green */
+}
+#bronze {
+  border-top: 5px solid #cd7f32; /* bronze */
+}
+#silver {
+  border-top: 5px solid #C0C0C0; /* silver */
+}
+#gold {
+  border-top: 5px solid #FFD700; /* gold */
+}

@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute; /* Always centered, even on small screens */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  padding: 20px;
+}
+
+.hero h1 {
+  background: rgba(0, 0, 0, 0.6); /* transparent background box */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+/*=========================
+  Why Choose BlueDoc
+=========================*/
+.section2 {
+  background-color: var(--color-primary);
+  padding: 5% 1rem;
+}
+.section2 h2 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.section2 > div {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.point1 {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10%;
+}
+.pointlist ul {
+  padding-left: 1.25rem;
+}
+.pointlist li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+/* Larger screen styles */
+@media (min-width: 768px) {
+  .hero-content {
+    max-width: 70%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.Homebutton {
+  display: inline-block;
+  margin-top: 20px;
+  background: #c49a6c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.Homebutton:hover {
+  background: #a87f54;
+}

@@ -1,0 +1,19 @@
+[
+  { "name": "Bright Minds Academy", "category": "Education", "description": "Private school offering quality education.", "website": "#", "logo": "images/edu1.png" },
+  { "name": "Smart Learn Tutors", "category": "Education", "description": "Tutoring services for all ages.", "website": "#", "logo": "images/edu2.png" },
+  { "name": "UniPrep Institute", "category": "Education", "description": "University preparation programs.", "website": "#", "logo": "images/edu3.png" },
+  { "name": "Green Valley School", "category": "Education", "description": "Primary & secondary education.", "website": "#", "logo": "images/edu4.png" },
+  { "name": "NextGen Learning Hub", "category": "Education", "description": "Online education platform.", "website": "#", "logo": "images/edu5.png" },
+
+  { "name": "City Health Clinic", "category": "Medical", "description": "General health check-ups.", "website": "#", "logo": "images/med1.png" },
+  { "name": "Bright Smile Dental", "category": "Medical", "description": "Dental and orthodontic services.", "website": "#", "logo": "images/med2.png" },
+  { "name": "HeartCare Center", "category": "Medical", "description": "Cardiology specialists.", "website": "#", "logo": "images/med3.png" },
+  { "name": "Wellness Plus", "category": "Medical", "description": "Wellness and fitness programs.", "website": "#", "logo": "images/med4.png" },
+  { "name": "City Hospital", "category": "Medical", "description": "Full-service hospital.", "website": "#", "logo": "images/med5.png" },
+
+  { "name": "TechPro Solutions", "category": "Technology", "description": "IT consulting & solutions.", "website": "#", "logo": "images/tech1.png" },
+  { "name": "NextWave Software", "category": "Technology", "description": "Custom software development.", "website": "#", "logo": "images/tech2.png" },
+  { "name": "CyberSecure Systems", "category": "Technology", "description": "Cybersecurity services.", "website": "#", "logo": "images/tech3.png" },
+  { "name": "Gadget World", "category": "Technology", "description": "Electronics & gadgets store.", "website": "#", "logo": "images/tech4.png" },
+  { "name": "WebCraft Studios", "category": "Technology", "description": "Website design & hosting.", "website": "#", "logo": "images/tech5.png" }
+]

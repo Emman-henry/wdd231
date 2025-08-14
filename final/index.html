@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 231 – H,brews Chambers - Emmanuel Henry</title>
+  <meta name="description" content="WDD 231 – Dynamic Web Fundamentals | Emmanuel Henry | learning CSS and homepage design" />
+  <meta name="author" content="Emmanuel Henry" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favour.ico" type="image/x-icon">
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="WDD 231 – Dynamic Web Fundamentals - Emmanuel Henry" />
+  <meta property="og:description" content="Explore CSS and web design fundamentals with Emmanuel Henry as part of the WDD 231 course." />
+  <meta property="og:image" content="https://emman-henry.github.io/wdd231/chamber/images/cover-image.jpg">
+  <meta property="og:url" content="https://emman-henry.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Emmanuel Henry Web Projects" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/finla.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="scripts/fwayfind.js" defer></script>
+  <script src="scripts/showcardmodal.js" defer></script>
+</head>
+<body>
+   <header>
+  <div class="nav-container">
+    <img src="images/favour.ico" alt="H'brews logo" class="nav-icon">
+    <p class="nav-head">H'brews</p>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html" class="nav-pages">Home</a></li>
+      <li><a href="about.html" class="nav-pages">About</a></li>
+      <li><a href="join.html" class="nav-pages">Join</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+ <section id="home" class="hero">
+    <picture>
+      <source srcset="images/probig.webp" media="(min-width: 1000px)" />
+      <source srcset="images/prosmall.webp" media="(min-width: 350px)" />
+      <img src="images/small.webp" alt="Hero background" loading="lazy">
+    </picture>
+    <div class="hero-content">
+      <h2>H’brews supports millions of businesses by providing a trusted and scalable foundation for growth.</h2>
+      <button class="Homebutton" onclick="location.href='register.html'">Join us</button>
+    </div>
+</section>
+
+<section class="membership-cards">
+      <div class="card" id="np">
+        <h3>NP Membership</h3>
+        <a href="#modal-np">Learn More</a>
+      </div>
+      <div class="card" id="bronze">
+        <h3>Bronze Membership</h3>
+        <a href="#modal-bronze">Learn More</a>
+      </div>
+      <div class="card" id="silver">
+        <h3>Silver Membership</h3>
+        <a href="#modal-silver">Learn More</a>
+      </div>
+      <div class="card" id="gold">
+        <h3>Gold Membership</h3>
+        <a href="#modal-gold">Learn More</a>
+      </div>
+</section>
+
+<!-- Modals -->
+<dialog id="modal-np">
+  <h4>NP Membership Benefits</h4>
+  <p>Access to community resources, networking, and free event invites for non-profits.</p>
+  <button onclick="document.getElementById('modal-np').close()">Close</button>
+</dialog>
+
+<dialog id="modal-bronze">
+  <h4>Bronze Membership Benefits</h4>
+  <p>Includes training sessions, event participation, and basic promotion features.</p>
+  <button onclick="document.getElementById('modal-bronze').close()">Close</button>
+</dialog>
+
+<dialog id="modal-silver">
+  <h4>Silver Membership Benefits</h4>
+  <p>Everything in Bronze + featured directory listing, discount on services, and spotlight ads.</p>
+  <button onclick="document.getElementById('modal-silver').close()">Close</button>
+</dialog>
+
+<dialog id="modal-gold">
+  <h4>Gold Membership Benefits</h4>
+  <p>All Silver perks + premium support, homepage highlights, and exclusive invitations.</p>
+  <button onclick="document.getElementById('modal-gold').close()">Close</button>
+</dialog>
+
+<div id="cardContainer" class="card-grid"></div>
+
+<section class="section2">
+  <h2>Why Choose BlueDoc</h2>
+
+  <div>
+    <div><h3 class="point1">Detail-Oriented</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>BlueDoc ensures all students are carried along with practical examples that clarify concepts.</li>
+        <span class="excess"><li>Lessons are designed to break down complex topics into simple, digestible parts.</li>
+        <li>Instructors pay close attention to individual progress and provide personalized feedback.</li></span>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Highly Engaging</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>Interactive sessions that encourage student participation and discussion.</li>
+        <span class="excess"><li>Use of multimedia tools and real-life scenarios to maintain attention and relevance.</li>
+        <li>Live Q&A sessions to address student concerns immediately.</li></span>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Career-Focused Training</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>Courses designed with industry demand in mind, preparing you for real jobs.</li>
+        <span class="excess"><li>Project-based learning that builds your portfolio from day one.</li>
+        <li>Resume and job interview support after course completion.</li></span>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Flexible & Affordable</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>Evening and weekend classes available to fit your schedule.</li>
+        <span class="excess"><li>Early bird discounts and flexible payment plans.</li>
+        <li>Access to free tools and resources without hidden fees.</li></span>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <section class="footer-into">
+    <div class="abt-company">
+      <p>H'brews Chamber of Commerce</p>
+      <p>No 6 Anthony, Lagos</p>
+      <p>henry.cdcare.ng@gmail.com</p>
+      <p>+234 916 436 7035</p>
+    </div>
+    <div class="social-icon">
+      <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+        <img src="images/icons8-twitter.svg" alt="twitter" width="16" height="16" />
+      </a>
+      <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+        <img src="images/icons8-linkedin.svg" alt="linkedin" width="16" height="16" />
+      </a>
+      <a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/" target="_blank">
+        <img src="images/icons8-instagram.svg" alt="instagram" width="16" height="16" />
+      </a>
+    </div>
+    <div class="my-infor">
+      <p>WDD 231 Class Project</p>
+      <p>Emmanuel Henry</p>
+      <p>&copy;2025 H'brews Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </section>
+</footer>
+</body>
+</html>
