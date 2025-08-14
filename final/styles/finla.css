@@ -150,7 +150,7 @@ footer a:hover {
 
 
 }
-.modal-close{
+#modal-close{
   font-family: var(--sub-font);
 }
 @media (min-width: 1200px) {
