@@ -150,9 +150,15 @@ footer a:hover {
 
 
 }
-#modal-close{
-  font-family: var(--sub-font);
+.modal-close {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border: none;
+  background: #004466;
+  color: white;
+  border-radius: 4px;
 }
+
 @media (min-width: 1200px) {
   /* Desktop layout */
 header {
