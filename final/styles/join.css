@@ -1,90 +1,117 @@
-.business-form {
-  max-width: 80%;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+/* ==========================
+  Global Styles
+========================== */
+:root {
+  --color-primary: #004466;
+  --color-secondary: #EAF3B6;
+  --color-white: #ffffff;
+  --color-dark: #050505;
+  --color-accent: #ff9800;
+  --color-light: #f4f4f4;
+  --font-main: 'Montserrat', sans-serif;
+  --font-sub: 'Poppins', sans-serif;
 }
 
-.business-form h2 {
+/* Ensure all elements respect container width (fixes input overflow) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+/* ==========================
+  Form Card
+========================== */
+.business-form {
+  background-color: var(--color-white);
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.business-form h1 {
+  font-family: var(--font-sub);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  color: var(--color-primary);
 }
 
 .business-form label {
   display: block;
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: #444;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
+/* Input, Select, and Textarea styling */
 .business-form input,
 .business-form select,
 .business-form textarea {
   width: 100%;
-  padding: 10px 12px;
-  margin-top: 5px;
+  padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
-  transition: all 0.2s ease-in-out;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  background-color: #fff;
 }
 
+/* Focus effect for better accessibility */
 .business-form input:focus,
 .business-form select:focus,
 .business-form textarea:focus {
-  border-color: #c49a6c;
-  box-shadow: 0 0 5px rgba(196, 154, 108, 0.4);
+  border-color: var(--color-primary);
   outline: none;
+  box-shadow: 0 0 4px rgba(0, 68, 102, 0.4);
 }
 
+/* Allow textarea to resize vertically only */
+.business-form textarea {
+  resize: vertical;
+}
+
+/* ==========================
+  Submit Button
+========================== */
 .business-form input[type="submit"] {
-  background: #c49a6c;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   font-weight: bold;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  margin-top: 1.5rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .business-form input[type="submit"]:hover {
-  background: #a87f54;
-}
-.modal {
-  position: fixed; /* stays in place even when scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent backdrop */
-  display: none; /* hidden by default */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* ensures it’s above everything */
+  background-color: var(--color-accent);
 }
 
-.modal.active {
-  display: flex; /* show when active */
-}
-
-.modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  z-index: 10000; /* higher than backdrop just in case */
-}
-
-@media (max-width: 600px) {
+/* ==========================
+  Responsive Design
+========================== */
+@media (max-width: 768px) {
   .business-form {
-    padding: 15px;
+    max-width: 95%; /* Prevents overflow on mobile */
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-form {
+    padding: 1rem; /* Slightly smaller padding for extra-small screens */
   }
 }
