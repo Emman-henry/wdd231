@@ -19,9 +19,10 @@
   position: relative;                  /* Allows absolutely positioned elements inside */
   text-align: center;                   /* Centers text and inline elements horizontally */
   color: var(--color-white);            /* Default text color for hero */
-  min-height: 60vh;                     /* At least 60% of viewport height */
+  min-height: 70vh;                     /* At least 60% of viewport height */
   background-color: var(--color-dark);  /* Fallback color if image doesn’t load */
-  overflow: hidden;                     /* Hides overflow from image or content */
+  overflow: hidden;/* Hides overflow from image or content */
+  
 }
 
 /* Ensure <picture> and <img> fill hero */
@@ -34,7 +35,7 @@
 
 .hero img {
   object-fit: cover;                     /* Image covers the entire hero area */
-  aspect-ratio: 22 / 9;                  /* Maintains shape to prevent layout shift */
+  aspect-ratio: 7 / 9;                  /* Maintains shape to prevent layout shift */
 }
 
 /* Content box over the hero image */
@@ -127,8 +128,14 @@
 /* Medium screens (tablets) */
 @media (min-width: 768px) {
   .hero-content {
-    max-width: 70%;
+    max-width: 90%;
   }
+
+  
+.hero img {
+  object-fit: cover;                     /* Image covers the entire hero area */
+  aspect-ratio: 23/ 9;                  /* Maintains shape to prevent layout shift */
+}
 
   .hero h2 {
     font-size: 1.9rem;
@@ -139,10 +146,10 @@
 @media (min-width: 1024px) {
   .hero-content {
     width: 60%;
-    max-width: 600px;
+    
   }
 
   .hero h2 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
 }
