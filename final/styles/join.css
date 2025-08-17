@@ -1,30 +1,12 @@
 /* ==========================
   Global Styles
 ========================== */
-:root {
-  --color-primary: #004466;
-  --color-secondary: #EAF3B6;
-  --color-white: #ffffff;
-  --color-dark: #050505;
-  --color-accent: #ff9800;
-  --color-light: #f4f4f4;
-  --font-main: 'Montserrat', sans-serif;
-  --font-sub: 'Poppins', sans-serif;
-}
 
 /* Ensure all elements respect container width (fixes input overflow) */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--color-light);
-  color: var(--color-dark);
-  line-height: 1.6;
 }
 
 /* ==========================

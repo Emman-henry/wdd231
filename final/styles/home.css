@@ -1,16 +1,6 @@
 /*=========================
   Root Variables (Theme)
 =========================*/
-:root {
-  --color-primary: #004466;
-  --color-secondary: #EAF3B6;
-  --color-white: #ffffff;
-  --color-dark: #050505;
-  --color-accent: #ff9800;
-  --color-light: #f4f4f4;
-  --font-main: "Poppins", sans-serif;
-  --sub-font: "Montserrat", sans-serif;
-}
 
 /*=========================
   Hero Section

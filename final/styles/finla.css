@@ -1,6 +1,6 @@
 /*==========variable colors==============*/
 :root {
-  --color-primary: #004466;
+  --color-primary: #005fa3 ;
   --color-secondary: #EAF3B6;
   --color-white: #ffffff;
   --color-dark: #050505;
@@ -9,6 +9,15 @@
   --font-main: "Poppins", sans-serif;
   --sub-font: "Montserrat", sans-serif;
 }
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
 header {
   display: flex;
   flex-direction: column;
