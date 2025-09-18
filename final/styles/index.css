@@ -42,6 +42,16 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
+.modal{
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width:50%;
+}
+
 
 /* Optional: give each membership a distinct accent color */
 #np {

@@ -1,12 +1,21 @@
-/* ==========================
-  Global Styles
-========================== */
+/* ===== Global Reset for Join Page ===== */
+html, body {
+  font-size: 18px;          /* keep consistent with other pages */
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-dark);
+}
 
-/* Ensure all elements respect container width (fixes input overflow) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ==========================
+  Global Fix for Form Page
+========================== */
+.business-form label,
+.business-form input,
+.business-form select,
+.business-form textarea {
+  font-size: 1.1rem; /* ✅ slightly larger than default (16px) */
+  font-family: var(--font-main); /* ✅ consistent font */
+  color: var(--color-dark);
 }
 
 /* ==========================
@@ -19,11 +28,12 @@
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
 .business-form h1 {
   font-family: var(--font-sub);
-  font-size: 1.8rem;
+  font-size: 2rem; /* ✅ slightly larger for headings */
   margin-bottom: 1.5rem;
   text-align: center;
   color: var(--color-primary);
@@ -44,8 +54,7 @@
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 1.1rem; /* ✅ consistent with labels */
   background-color: #fff;
 }
 
@@ -62,6 +71,16 @@
 .business-form textarea {
   resize: vertical;
 }
+/* ===== Force consistency for nav + footer ===== */
+.nav-links a,
+footer,
+footer p,
+footer a {
+  font-size: 1rem !important;   /* force back to 18px */
+  font-family: var(--font-main) !important;
+  line-height: 1.6;
+}
+
 
 /* ==========================
   Submit Button
@@ -76,6 +95,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1.1rem; /* ✅ keep button text consistent */
 }
 
 .business-form input[type="submit"]:hover {
@@ -87,13 +107,22 @@
 ========================== */
 @media (max-width: 768px) {
   .business-form {
-    max-width: 95%; /* Prevents overflow on mobile */
+    max-width: 95%;
     padding: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .business-form {
-    padding: 1rem; /* Slightly smaller padding for extra-small screens */
+    padding: 1rem;
   }
+}
+/* ===== Force consistency for nav + footer ===== */
+.nav-links a,
+footer,
+footer p,
+footer a {
+  font-size: 1rem !important;   /* force back to 18px */
+  font-family: var(--font-main) !important;
+  line-height: 1.6;
 }

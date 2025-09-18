@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="Emmanuel Henry Web Projects" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles/finla.css" />
+  <link rel="stylesheet" href="styles//finla.css" />
   <link rel="stylesheet" href="styles/home.css" />
   <link rel="stylesheet" href="styles/index.css" />
 
@@ -37,7 +37,7 @@
 <body>
    <header>
   <div class="nav-container">
-    <img src="images/favour.ico" alt=">NaijaBizConnect" class="nav-icon">
+    <img src="images/favour.ico" alt="NaijaBizConnect" class="nav-icon">
     <p class="nav-head">NaijaBizConnect</p>
     <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
   </div>
@@ -53,9 +53,9 @@
 <main>
   <section id="home" class="hero">
     <picture>
-      <source srcset="images/probig.webp" media="(min-width: 1000px)" />
-      <source srcset="images/smalfit.webp" media="(min-width: 350px)" />
-      <img src="images/probig.webp" alt="Hero background" loading="lazy">
+      <source srcset="images/blackbiz.webp" media="(min-width: 1000px)" />
+      <source srcset="images/blackbiz.webp" media="(min-width: 350px)" />
+      <img src="images/blackbiz.webp" alt="Hero background" loading="lazy">
     </picture>
     <div class="hero-content">
       <h2>Empowering Nigerian entrepreneurs and local businesses with resources, networks, and opportunities for sustainable growth.</h2>
@@ -63,46 +63,46 @@
       <button class="Homebutton" id="Homebutton"  >Join us</button></a>
     </div>
   </section>
-
+<h2 class="sec2head" >What We Do</h2>
   <section class="membership-cards">
     <div class="card" id="np">
-      <h3>NP Membership</h3>
+      <h3>Business Support</h3>
       <a href="#modal-np">Learn More</a>
     </div>
     <div class="card" id="bronze">
-      <h3>Bronze Membership</h3>
+      <h3>Networking Hub</h3>
       <a href="#modal-bronze">Learn More</a>
     </div>
     <div class="card" id="silver">
-      <h3>Silver Membership</h3>
+      <h3>Growth & Opportunities</h3>
       <a href="#modal-silver">Learn More</a>
     </div>
     <div class="card" id="gold">
-      <h3>Gold Membership</h3>
+      <h3>Community Updates</h3>
       <a href="#modal-gold">Learn More</a>
     </div>
   </section>
 
   <!-- Modals -->
-  <dialog id="modal-np">
+  <dialog id="modal-np" class="modal">
     <h4>NP Membership Benefits</h4>
     <p>Designed for non-profits working to support Nigerian entrepreneurs. Gain access to community resources, networking opportunities, and free entry to key local events.</p>
     <button class="modal-close" data-modal="modal-np">Close</button>
   </dialog>
 
-  <dialog id="modal-bronze">
+  <dialog id="modal-bronze" class="modal">
     <h4>Bronze Membership Benefits</h4>
     <p>Perfect for small businesses starting out. Includes basic promotional opportunities, a directory listing, and access to community networking events.</p>
     <button class="modal-close" data-modal="modal-bronze">Close</button>
   </dialog>
 
-  <dialog id="modal-silver">
+  <dialog id="modal-silver" class="modal">
     <h4>Silver Membership Benefits</h4>
     <p>For growing businesses. All Bronze benefits plus a featured listing in the directory, discounts on services, and greater visibility in our promotions.</p>
     <button class="modal-close" data-modal="modal-silver">Close</button>
   </dialog>
 
-  <dialog id="modal-gold">
+  <dialog id="modal-gold" class="modal">
     <h4>Gold Membership Benefits</h4>
     <p>Premium package for established Nigerian businesses. All Silver perks plus homepage highlights, exclusive event invitations, and priority business support.</p>
     <button class="modal-close" data-modal="modal-gold">Close</button>

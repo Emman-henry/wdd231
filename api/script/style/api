@@ -1,0 +1,42 @@
+// Function that creates a card for each product
+function createProductCard(product) {
+  const card = document.createElement('div');
+  card.classList.add('product-card');
+
+  // Safely access details with optional chaining (?.)
+  const color = product.data?.color || product.data?.Color || "N/A";
+  const capacity = product.data?.capacity || product.data?.Capacity || product.data?.["capacity GB"] || "N/A";
+  const price = product.data?.price || product.data?.Price || "N/A";
+  const generation = product.data?.generation || product.data?.Generation || "N/A";
+
+  card.innerHTML = `
+    <h3>${product.name}</h3>
+    <p><strong>ID:</strong> ${product.id}</p>
+    <p><strong>Color:</strong> ${color}</p>
+    <p><strong>Capacity:</strong> ${capacity}</p>
+    <p><strong>Price:</strong> ${price}</p>
+    <p><strong>Generation:</strong> ${generation}</p>
+  `;
+
+  return card;
+}
+   
+
+
+// Fetch products from the API
+fetch("https://api.restful-api.dev/objects")
+  .then(response => response.json())  // convert API response to JSON
+  .then(data => {
+    // Find the container in HTML where cards will be placed
+    const container = document.getElementById('cards-container');
+
+    // Loop through each product in the API data
+    data.forEach(product => {
+      // Create a card for each product
+      const card = createProductCard(product);
+
+      // Add the card to the container
+      container.appendChild(card);
+    });
+  })
+  .catch(error => console.error("Error fetching products:", error));

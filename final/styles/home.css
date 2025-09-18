@@ -12,7 +12,6 @@
   min-height: 70vh;                     /* At least 60% of viewport height */
   background-color: var(--color-dark);  /* Fallback color if image doesn’t load */
   overflow: hidden;/* Hides overflow from image or content */
-  
 }
 
 /* Ensure <picture> and <img> fill hero */
@@ -67,7 +66,15 @@
 .Homebutton:hover {
   background: var(--color-accent);
 }
+.sec2head{
+  
 
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  font-family: var(--font-main);
+
+}
 /*=========================
   Why Choose BlueDoc Section
 =========================*/
